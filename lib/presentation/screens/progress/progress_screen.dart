@@ -71,7 +71,7 @@ class _ControllerProgressIndicator extends StatelessWidget {
                   value: progressValue,
                   strokeWidth: 2,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 Expanded(
