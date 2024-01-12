@@ -45,4 +45,10 @@ const appMenuItems = <MenuItems>[
     link: '/animated',
     icon: Icons.animation_rounded,
   ),
+  MenuItems(
+    title: 'Ui controls',
+    subTitle: 'Controles',
+    link: '/ui-controls',
+    icon: Icons.android,
+  ),
 ];
