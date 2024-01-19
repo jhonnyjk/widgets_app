@@ -51,4 +51,10 @@ const appMenuItems = <MenuItems>[
     link: '/ui-controls',
     icon: Icons.android,
   ),
+  MenuItems(
+    title: 'App tutorials',
+    subTitle: 'Tutoriales',
+    link: '/tutorial',
+    icon: Icons.offline_bolt_sharp,
+  ),
 ];
