@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -45,7 +46,12 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
   void initState() {
     super.initState();
     pageviewController.addListener(() {
-      print('${pageviewController.page}');
+      final page = pageviewController.page ?? 0;
+      if (!endReached && page >= (slides.length - 1.5)) {
+        setState(() {
+          endReached = true;
+        });
+      }
     });
   }
 
@@ -79,11 +85,15 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
               ? Positioned(
                   bottom: 30,
                   right: 30,
-                  child: FilledButton(
-                    onPressed: () {
-                      context.pop();
-                    },
-                    child: Text('Comenzar'),
+                  child: FadeInRight(
+                    from: 15,
+                    delay: Duration(seconds: 1),
+                    child: FilledButton(
+                      onPressed: () {
+                        context.pop();
+                      },
+                      child: Text('Comenzar'),
+                    ),
                   ),
                 )
               : Text('data'),
