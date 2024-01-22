@@ -63,7 +63,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
         children: [
           PageView(
             controller: pageviewController,
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             children: [
               ...slides.map((slideData) => _Slide(
                   title: slideData.title,
@@ -78,7 +78,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
               onPressed: () {
                 context.pop();
               },
-              child: Text('Saltar'),
+              child: const Text('Saltar'),
             ),
           ),
           endReached
@@ -87,16 +87,16 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
                   right: 30,
                   child: FadeInRight(
                     from: 15,
-                    delay: Duration(seconds: 1),
+                    delay: const Duration(seconds: 1),
                     child: FilledButton(
                       onPressed: () {
                         context.pop();
                       },
-                      child: Text('Comenzar'),
+                      child: const Text('Comenzar'),
                     ),
                   ),
                 )
-              : Text('data'),
+              : const Text('data'),
         ],
       ),
     );
@@ -120,19 +120,19 @@ class _Slide extends StatelessWidget {
     final captionStyle = Theme.of(context).textTheme.bodySmall;
 
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 30),
       child: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image(image: AssetImage(imageUrl)),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Text(
             title,
             style: titleStyle,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Text(
             caption,
             style: captionStyle,

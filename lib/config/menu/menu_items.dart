@@ -57,4 +57,10 @@ const appMenuItems = <MenuItems>[
     link: '/tutorial',
     icon: Icons.offline_bolt_sharp,
   ),
+  MenuItems(
+    title: 'Infinite scroll y pull to refresh',
+    subTitle: 'Scroll infinito',
+    link: '/scroll',
+    icon: Icons.scatter_plot,
+  ),
 ];
